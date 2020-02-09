@@ -1,0 +1,6 @@
+RewriteEngine on
+RewriteRule ^home   index.php?onde=home [L]
+RewriteRule ^dashboard   index.php?onde=dashboard [L]
+RewriteRule ^login   index.php?onde=login [L]
+RewriteRule ^register   index.php?onde=register [L]
+RewriteRule ^settings   index.php?onde=settings [L]
