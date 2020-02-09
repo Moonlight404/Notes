@@ -1,4 +1,5 @@
 <?php
+require("json.php");
 $db = "notes"; 
 // Db
 $user = "root"; 

@@ -1,12 +1,18 @@
 <?php
-
 function req($onde){
     include("html/{$onde}/index.php");
 }
 
 function validarLogin(){
     if(isset($_COOKIE['iduser']) && isset($_COOKIE['cry'])){
-        return true;
+        $iduser = $_COOKIE['iduser'];
+        $cry = $_COOKIE['cry'];
+        $rs = $con->query("SELEC * FROM user where id = {$iduser} and cry = {$cry}");
+        if($rs){
+            return true;
+        } else{
+            return false;
+        }
     } else{
         return false;
     }
@@ -38,7 +44,6 @@ function route(){
         }  else{
             req($o);
         }
-        
     } else{
         if(validarLogin()){
             req("dashboard");
