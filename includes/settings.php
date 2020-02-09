@@ -1,5 +1,7 @@
 <?php
-require("json.php");
+if(isset($api)){
+    require("json.php");
+}
 $db = "notes"; 
 // Db
 $user = "root"; 
